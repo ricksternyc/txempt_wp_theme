@@ -15,6 +15,7 @@
 // GLOBAL STYLES
 //
 
+
 h1 {
     font-size: 3em;
 }
@@ -115,7 +116,6 @@ ul#main-menu {
 }
 
 .navbar {
-
     position:absolute;
     top:0;
     z-index:10;
@@ -124,14 +124,12 @@ ul#main-menu {
 
 }
 
-
 @media (min-width: 900px) { //desktop 
     .navbar {
         padding-left: 4em;
         padding-right: 4em;
     }
 }
-
 
 .bg-primary {
     background-color: transparent !important; //#54657f
@@ -155,9 +153,9 @@ ul#main-menu {
         background-repeat: no-repeat;
     }
 
-    .container-fluid {
-        padding: unset;
-        //        position: relative;
+    .col {
+        padding-right: unset; 
+        padding-left: unset;
     }
 
     .content_overlay {
@@ -179,7 +177,7 @@ ul#main-menu {
         text-align: center;
     }
 
-    li {
+    li { //indicators
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -187,19 +185,27 @@ ul#main-menu {
     }
 
     @media (max-width: 767px) {
-        li {
-            width: 20px;
-            height: 20px;
+        .carousel-item {
+            background-attachment: scroll;
+        }
+
+        li { //indicators, hidden on mobile
+            display: none !important;
         }
     }
 
     @media (max-width: 900px) {
         .the_content {
-            padding: 2.2em;    
+            padding: 2.2em; 
+            padding-top: 20%;
+            
+            br {
+                display: none;
+            }
         }
-
     }
 }
+
 //
 //WHO WE ARE
 //
