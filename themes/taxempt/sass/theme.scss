@@ -1,0 +1,302 @@
+@import "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+@import "assets/bootstrap4";// <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
+@import "understrap/understrap";// <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
+@import "understrap/woocommerce";// <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+
+//Optional files - If you dont use the corresponding scripts/fonts comment em out
+@import "assets/font-awesome"; // <------- Font Awesome Icon font
+@import "assets/underscores"; // <------- Underscores media styles
+
+// Any additional imported files //
+@import "theme/theme";  // <--------- That's where you can add your own design. Thats your part!
+@import "theme/contact-form7"; // Contact Form 7 - Bootstrap 4 support
+
+//
+// GLOBAL STYLES
+//
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.space_1em {
+    padding: 1em 0;
+}
+
+.space_btwn_1em {
+    padding: 0 1em;
+}
+
+.space_2em {
+    padding: 2em 0;
+}
+
+// 
+// NAVIGATION   //
+// 
+
+nav {   
+
+    img.img-fluid {
+        width: auto;
+        height: 160px;
+    }
+
+    @media (max-width: 767px) {
+
+        img.img-fluid {
+            height: 100px;
+        }
+    }
+
+    li {
+        font-size: 1.4em;
+        text-transform: uppercase;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(255, 225, 166);
+}
+
+//
+// Make Full Page Transparent Header
+//
+
+ul#main-menu {
+    text-align: right;
+}
+
+
+@media (max-width: 330px) {
+    .the_content {
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    ul#main-menu {
+        /* top: -15px; */
+        position: relative;
+        /* top: -62px; */
+        text-align: right;
+        background-color: #000;
+        width: 200px;
+        padding: 1em;
+        /* margin-top: -61px; */
+    }
+}
+
+
+.navbar-wrapper {
+    position:relative;
+}
+
+.carousel {
+    top: 0;
+    z-index: -1;
+}
+
+.carousel-inner {
+    width: 100%; 
+    overflow: hidden;
+}
+
+.navbar {
+
+    position:absolute;
+    top:0;
+    z-index:10;
+    width:100%;
+    padding-top: .8em;
+
+}
+
+
+@media (min-width: 900px) { //desktop 
+    .navbar {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+}
+
+
+.bg-primary {
+    background-color: transparent !important; //#54657f
+}
+
+//
+//CAROUSEL
+//
+
+#section-1 {
+    .carousel-item {
+        height: 100vh;
+        width: 100%;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container-fluid {
+        padding: unset;
+        //        position: relative;
+    }
+
+    .content_overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .the_content {
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+        color: #fff;
+        max-width: 800px;
+        text-align: center;
+    }
+
+    li {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: 2em;
+    }
+
+    @media (max-width: 767px) {
+        li {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .the_content {
+            padding: 2.2em;    
+        }
+
+    }
+}
+//
+//WHO WE ARE
+//
+
+#section-2 {
+    box-shadow: 
+        inset 0px 11px 8px -10px #000,
+        inset 0px -11px 8px -10px #000; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    background-color: #606b8082;
+
+    .card_center {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+    }
+
+    .card-title {
+        min-height: 20px;
+    }
+
+    .card-body {
+        background-color: #f6fdfa !important;
+        min-height: 340px;
+    }
+
+    p {
+        font-size: .9em;
+    }
+
+    @media (max-width: 1583px){
+        .card-body {
+            min-height: 400px;
+        }
+    }
+
+    @media (min-width: 900px) and (max-width: 1240px) {
+        .card-body {
+            min-height: 500px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .card-body {
+            min-height: 240px;
+        }
+
+    }
+}
+
+
+//
+//CONTACT
+//
+
+#section-3 {
+    background-color: #2f2e2e;
+    color: #fff;
+
+    .rk_contact_section {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+
+    .btn-outline-primary, .wpcf7 input[type=submit] {
+        color: #fff !important;
+        background-color: transparent;
+        background-image: none;
+        border-color: #fff !important;
+    }
+
+    @media (max-width: 900px) {
+        .rk_contact_section {
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    h6 {
+        font-size: 10px;
+    }
+    a {
+        color: #fff;
+
+        &:hover {
+            color: yellow;
+        }
+    }
+}
