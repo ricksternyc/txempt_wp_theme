@@ -2,7 +2,7 @@
 $(function() {//DOM ready
 
   $('.carousel').carousel({
-      interval: 1800
+      interval: 2000
     })
     
     

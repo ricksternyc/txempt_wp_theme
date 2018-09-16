@@ -55,6 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                             </div>
                         </div>
 
+<!--
                         <a class="carousel-control-prev" href=".slide" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
@@ -63,6 +64,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
+-->
                     </div>
                 </div>
             </div>
