@@ -14,16 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
-
-<!--<div class="wrapper" id="full-width-page-wrapper">-->
-<!--
-
-<div class="<?php echo esc_attr( $container ); ?>" id="content">
--->
-
-
 <main class="site-main" id="main" role="main">
-
     <section id="section-1">
         <div class="container-fluid">
             <div class="row">
@@ -35,6 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <li data-target=".slide" data-slide-to="1"></li>
                             <li data-target=".slide" data-slide-to="2"></li>
                         </ol>
+
                         <div class="carousel-inner">
                             <div class="carousel-item active" style="background-image: url('<?php the_field('home_slide_1'); ?>')">
                             </div>
@@ -54,29 +46,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                             </div>
                         </div>
-
-<!--
-                        <a class="carousel-control-prev" href=".slide" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href=".slide" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
--->
                     </div>
                 </div>
             </div>
-
         </div>
-
     </section>
 
-
     <section id="section-2">
-
-
         <div class="container-fluid trick-out">  
             <div class="space_2em"></div>
             <div class="row">
@@ -84,7 +60,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <h1>Who We Are</h1>
                 </div>
             </div>
-
             <div class="row card_center">
                 <div class="col-xs-12 col-lg-4 card_bounce">
                     <div class="card">
@@ -96,7 +71,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <p class="card-text"><?php the_field('paragraph_left'); ?> </p>
                         </div>
                     </div>
-
                     <br/>
                 </div>
                 <div class="space_btwn_1em"></div>
@@ -114,14 +88,9 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
             <div class="space_2em"></div>
         </div>
-
-
     </section>
-
     <section id="section-3">
         <div class="space_2em"></div>
-
-
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 rk_contact_section">
@@ -135,15 +104,6 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
         </div>
         <div class="space_2em"></div>
-
     </section>
-
-
 </main><!-- #main -->
-
-
-</div><!-- Container end -->
-
-
-
 <?php get_footer(); ?>
