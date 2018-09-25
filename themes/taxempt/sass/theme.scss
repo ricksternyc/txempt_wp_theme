@@ -41,14 +41,12 @@ p {
 // 
 
 nav {   
-
     img.img-fluid {
         width: auto;
         height: 160px;
     }
 
     @media (max-width: 767px) {
-
         img.img-fluid {
             height: 100px;
         }
@@ -77,11 +75,13 @@ ul#main-menu {
 }
 
 
-@media (max-width: 330px) {
+@media (max-width: 600px) {
     .the_content {
+
         h1 {
-            font-size: 40px;
+            font-size: 32px;
         }
+
         p {
             font-size: 15px;
         }
@@ -100,7 +100,6 @@ ul#main-menu {
         /* margin-top: -61px; */
     }
 }
-
 
 .navbar-wrapper {
     position:relative;
